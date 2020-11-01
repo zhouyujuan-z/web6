@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div p{
+        background-color: red;
+        /* 后代选择器，用空格隔开，定义了div标签中的p标签 */
+    }
+    div.h3{
+        background-color: pink;
+        /* 交集选择器 ，中间没有空格，一定要与后代选择器仔细区分*/
+    }
+    div,#name{
+        background-color: yellow;
+        /* 并集选择器，定义的时候用逗号隔开 */
+    }
+    /* 最后一种是伪类选择器 */
+</style>
+<body>
+    <div>江西软件大学<p>运动会九班加油</p></div>
+    <div>江西软件大学
+        <!-- <p>大学生</p> -->
+            <div class="h3">周玉娟</div></div>
+    <div>软件工程学院九班<div id="name">周玉娟</div></div>
+</body>
+</html>
