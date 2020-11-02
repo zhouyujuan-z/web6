@@ -18,7 +18,12 @@
         background-color: yellow;
         /* 并集选择器，定义的时候用逗号隔开 */
     }
-    /* 最后一种是伪类选择器 */
+    li:first-child{
+        background: blue;
+    }
+    li:last-child{
+        background-color: darksalmon;
+    }
 </style>
 <body>
     <div>江西软件大学<p>运动会九班加油</p></div>
@@ -26,5 +31,11 @@
         <!-- <p>大学生</p> -->
             <div class="h3">周玉娟</div></div>
     <div>软件工程学院九班<div id="name">周玉娟</div></div>
+    <ul>
+        <li>伪类选择器的使用</li>
+        <li>百度查找</li>
+        <li>学会运用网络</li>
+        <li>啦啦啦啦啦啦</li>
+    </ul>
 </body>
 </html>
