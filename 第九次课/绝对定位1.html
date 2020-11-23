@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       body{
+           background-color: green;
+       }
+       .wrapper{
+           background-color: indigo;
+           width: 800px;
+           height: 500px;
+           margin: 50px;
+           margin-left: 200px;
+           border:1px solid red 
+           /* overflow: hidden; */
+           /* BFC块级格式化上下文   清浮动*/
+       }
+        .graderparents{
+           background-color: rgb(252, 0, 42);
+           width: 600px;
+           height: 400px;
+           margin: 20px;
+       }
+       .parent1{
+           background-color: lightpink;
+           width: 200px;
+           height: 200px;
+           display: inline-block;
+           margin: 10px;
+           
+       }
+       .parent2{
+           background-color: rgb(144, 214, 39);
+           width: 200px;
+           height: 200px;
+           display: inline-block;
+           margin: 10px;
+       }.son1{
+           background-color: teal;
+           width: 60px;
+           height: 60px;
+           position: absolute;
+           /* 绝对定位 相对于自己的上一级，如果上一级有static
+           或者没有设置absolute、relative再找上一级，以此类推 */
+           top: 10px;
+       }
+       .son2{
+           background:black;
+           width: 60px;
+           height: 60px;
+           position: relative;
+           /* 相对定位  只相对于自己的位置*/
+           top :10px;
+       }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="graderparents">
+        <div class="parent1">
+            <div class="son1"></div>
+        </div>
+        <div class="parent2">
+            <div class="son2"></div>
+        </div>
+        </div>
+    </div>
+</body>
+</html>
